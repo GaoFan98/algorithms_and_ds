@@ -17,7 +17,8 @@ def selectionSort(arr):
         smallest = findSmallestNumber(arr)
         arr_num.append(arr.pop(smallest))
 
-    print(arr_num)
+    return arr_num
 
 
-selectionSort([2, 90, 0, -1, 60])
+sel_sort = selectionSort([2, 90, 0, -1, 60])
+print(sel_sort)
