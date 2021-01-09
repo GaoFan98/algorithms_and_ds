@@ -3,8 +3,8 @@ def quick_sort(arr):
         return arr
     else:
         pivot = arr[0]
-        less = [num for num in arr[1:] if pivot <= num]
-        greater = [num for num in arr[1:] if pivot > num]
+        less = [num for num in arr[1:] if num <= pivot]
+        greater = [num for num in arr[1:] if num > pivot]
 
         return quick_sort(less) + [pivot] + quick_sort(greater)
 
