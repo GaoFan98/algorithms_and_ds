@@ -22,3 +22,7 @@ def selectionSort(arr):
 
 sel_sort = selectionSort([2, 90, 0, -1, 60])
 print(sel_sort)
+
+"""
+Big O: log(n^2)
+"""

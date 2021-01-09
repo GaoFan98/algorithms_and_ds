@@ -11,3 +11,7 @@ def quick_sort(arr):
 
 q = quick_sort([7, -9, 12, 8, 89])
 print(q)
+
+"""
+Big O: nlog(n)
+"""

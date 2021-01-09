@@ -22,3 +22,7 @@ def binary_search(num_list):
 
 res = binary_search([1, 4, 9, 14, 36, 49, 56, 78, 213, 439, 569, 772, 890, 918])
 print(res)
+
+"""
+Big O: log(n)
+"""
