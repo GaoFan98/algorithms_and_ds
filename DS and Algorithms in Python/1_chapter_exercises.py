@@ -79,4 +79,52 @@
 # print(rand_choice([1, 4, 6, 8]))
 
 # --------C-1.13-----------
+# def order_reverse(data):
+#     reverse = []
+#
+#     while len(data):
+#         reverse.append(data.pop())
+#
+#     return reverse
+#
+#
+# print(order_reverse([-2131, 2, 3, 4, 5]))
+
+# --------C-1.14-----------
+# def odd_product_pair(data):
+#     """
+#     2*2 = 4 even
+#     3*4 = 12 even
+#     3*3 = 9 odd
+#     """
+#     for first in data:
+#         for second in data:
+#             if first != second and (first * second) % 2 == 1:
+#                 yield (first, second)
+#
+#
+# for item in odd_product_pair([1, 2, 3, 4, 5]):
+#     print(item)
+
+# --------C-1.15-----------
+# def diff_nums(data):
+#     """
+#     2*2 = 4 even
+#     3*4 = 12 even
+#     3*3 = 9 odd
+#     """
+#     unique_nums = set()
+#
+#     for num in data:
+#         if num not in unique_nums:
+#             unique_nums.add(num)
+#             return True
+#
+#         else:
+#             return False
+#
+#
+# print(diff_nums([11, 2, 4, 3]))
+
+# --------C-1.18-----------
 
