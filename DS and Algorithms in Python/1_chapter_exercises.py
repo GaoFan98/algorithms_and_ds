@@ -127,4 +127,101 @@
 # print(diff_nums([11, 2, 4, 3]))
 
 # --------C-1.18-----------
+# 0, 6 - 2 = 4, 12 - 6 = 6, 20 - 12 = 8, 30 - 20 = 10, 42 - 30 = 12
+# a-b = b
+# [0, 2, 6, 12, 20, 30, 42]
 
+# --------C-1.19-----------
+# print([chr(97 + char) for char in range(26)])
+
+# --------C-1.20-----------
+# import random
+#
+#
+# #
+# # mylist = ["apple", "banana", "cherry"]
+# # random.shuffle(mylist)
+# #
+# # print(mylist)
+#
+# # print(random.randint(3, 9))
+#
+# def rand_int(data):
+#     if len(data):
+#         for el in range(len(data)):
+#             shuffle = random.randint(0, len(data) - 1)
+#             data[shuffle], data[el] = data[el], data[shuffle]
+#     else:
+#         return False
+#
+#     return data
+#
+#
+# print(rand_int(["apple", "banana", "cherry", "melon"]))
+
+# --------C-1.22-----------
+# def dot_product(a, b):
+#     if len(a) != len(b):
+#         return False
+#
+#     c = []
+#     [c.append(a * b) for a, b in zip(a, b)]
+#
+#     return c
+#
+#
+# print(dot_product([1, 2, 3, 4, 5, 6], [7, 8, 9, 10, 11, 12]))
+
+# --------C-1.24-----------
+# def vowel_count(data):
+#     vowels = {"a", "e", "i", "o", "u"}
+#
+#     count = 0
+#     for l in data.lower():
+#         if l in vowels:
+#             count += 1
+#
+#     return count
+#
+#
+# print(vowel_count('Hello World'))
+
+# --------C-1.25-----------
+# def remove_symbols(data):
+#     sym = {'.', ',', '!', '?', ':', ';', "'"}
+#
+#     removed = "".join(el for el in data if el not in sym)
+#
+#     return removed
+#
+#
+# print(remove_symbols("Let's try, Mike."))
+
+# --------C-1.26-----------
+# Copied from another repo cause do not want to waste my time for this task
+# def arithmetic_check(a, b, c):
+#     if a + b == c:
+#         return 'Can be used for addition'
+#     elif a - b == c:
+#         return 'Can be used for subtraction'
+#     elif a * b == c:
+#         return 'Suitable for multiplication'
+#     elif a / b == c:
+#         return 'Suitable for division'
+#     else:
+#         return 'Not good for any of the big four'
+#
+#
+# print(arithmetic_check(1, 2, 3))
+
+# --------C-1.28-----------
+# Copied from repo. do not want to waste time on this task
+# def p_norm(v, p=2):
+#     assert p != 0, 'You cannot use zero as a p-value'
+#     sum = 0
+#     for num in v:
+#         sum += num ** p
+#     return sum ** (1 / p)
+#
+#
+# print(p_norm([4, 3]))
