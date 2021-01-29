@@ -227,20 +227,127 @@
 # print(p_norm([4, 3]))
 
 # --------P-1.29-----------
-def permutations(head, tail=''):
-    if len(head) == 0:
-        print(tail)
-    else:
-        for i in range(len(head)):
-            # print(head[:i])
-            # print(head[i + 1:])
-            # print(head[:i] + head[i + 1:])
-            # print(head[i])
-            # print(tail)
-            # print(head[:i] + head[i + 1:], tail + head[i])
-            permutations(head[i + 1:] + head[:i], tail + head[i])
-
-
-print(permutations("123"))
+# def permutations(head, tail=''):
+#     if len(head) == 0:
+#         print(tail)
+#     else:
+#         for i in range(len(head)):
+#             # print(head[:i])
+#             # print(head[i + 1:])
+#             # print(head[:i] + head[i + 1:])
+#             # print(head[i])
+#             # print(tail)
+#             # print(head[:i] + head[i + 1:], tail + head[i])
+#             permutations(head[i + 1:] + head[:i], head[i] + tail)
+#
+#
+# print(permutations("catdog"))
 
 # --------P-1.30-----------
+# def divide_by_two(n):
+#     count = 0
+#
+#     while n > 2:
+#         n /= 2
+#         count += 1
+#
+#     return count
+#
+#
+# print(divide_by_two(99))
+
+# --------P-1.31-----------
+# def return_change(given, back):
+#     money = [100, 20, 10, 5, 2, 1, 0.25, 0.10, 0.05, 0.01]
+#
+#     out = {}
+#     c = given - back
+#
+#     for coin in range(len(money)):
+#         if c // money[coin] != 0:
+#             out[money[coin]] = int(c // money[coin])
+#             c = c % money[coin]
+#     print(out)
+#
+#     # out['100'] = c // money[0]
+#     # c = c % money[0]
+#     # out['20'] = c // money[1]
+#     # c = c % money[1]
+#     # out['10'] = c // money[2]
+#     # c = c % money[2]
+#     # out['5'] = c // money[3]
+#     # c = c % money[3]
+#     # out['2'] = c // money[4]
+#     # c = c % money[4]
+#     # out['1'] = c // money[5]
+#     # c = c % money[5]
+#     # out['0.25'] = c // money[6]
+#     # c = c % money[6]
+#     # out['0.10'] = c // money[7]
+#     # c = c % money[7]
+#     # out['0.05'] = c // money[8]
+#     # c = c % money[8]
+#     # out['0.01'] = c // money[9]
+#     # c = c % money[9]
+#     #
+#     # print(out)
+#
+#
+# print(return_change(1000.84, 575))
+
+# --------P-1.34-----------
+# copied from another repo
+# import random
+#
+#
+# def create_typo(message, char_range):
+#     error_spot = random.randrange(0, len(message))
+#     error_character = random.choice(char_range)
+#     incorrect_message = list(message)
+#     incorrect_message[error_spot] = chr(error_character)
+#     return (''.join(incorrect_message))
+#
+#
+# def spamalot(message, num_errors=8, num_lines=10):
+#     # find all the character values for Aa-Zz
+#     char_range = list(range(ord('A'), ord('Z') + 1)) + list(range(ord('a'), ord('z') + 1))
+#
+#     line_count = 0
+#     error_lines = set()
+#     while line_count < num_errors:
+#         new_error_line = random.randrange(num_lines)
+#         if new_error_line not in error_lines:
+#             error_lines.add(new_error_line)
+#             line_count += 1
+#
+#     for i in range(num_lines):
+#         if i not in error_lines:
+#             print(message)
+#         else:
+#             print(create_typo(message, char_range), '<- This is the typo')
+#
+#
+# spamalot('I will never spam my friends again')
+
+# --------P-1.35-----------
+# import random
+#
+#
+# def birthday(n_people):
+#     birthday = [random.randrange(0, 365) for _ in range(n_people)]
+#     unique_birth = set()
+#
+#     for b in birthday:
+#         if b not in unique_birth:
+#             unique_birth.add(b)
+#
+#     counter = 0
+#     for trial in range(101):
+#         if trial in unique_birth:
+#             counter += 1
+#
+#
+# print(birthday(23))
+
+# --------P-1.36-----------
+# Not interesting task
