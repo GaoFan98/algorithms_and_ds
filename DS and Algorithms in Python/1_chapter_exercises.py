@@ -1,4 +1,4 @@
-# --------R-1.1-----------
+# ################R-1.1################
 # def is_multiple(n, m):
 #     if m == 0:
 #         return False
@@ -9,7 +9,7 @@
 # print(is_multiple(10, 5))  # True
 # print(is_multiple(10, 3))  # False
 
-# --------R-1.2-----------
+# ################R-1.2################
 # def is_even(k: int):
 #     list_of_even = [0, 2, 4, 6, 8]
 #     if int(str(k)[-1:]) in list_of_even:
@@ -19,7 +19,7 @@
 #
 # print(is_even(-14))
 
-# --------R-1.3-----------
+# ################R-1.3################
 # def min_max(data):
 #     if len(data) == 0:
 #         return False
@@ -36,35 +36,35 @@
 #
 # print(min_max([75, 1, 4, -5, 60]))
 
-# --------R-1.4 and R-1.5-----------
+# ################R-1.4 and R-1.5################
 # def square_sum(n: int):
 #     return sum(x * x for x in range(1, n))
 #
 #
 # print(square_sum(10))
 
-# --------R-1.6 and R-1.7-----------
+# ################R-1.6 and R-1.7################
 # def odd_square_num(n):
 #     return sum(x * x for x in range(1, n) if x % 2 == 1)
 #
 #
 # print(odd_square_num(10))
 
-# --------R-1.8-----------
+# ################R-1.8################
 # s = "Hello"
 # n = len(s)
 # s[k] for -n <= k < 0
 
-# --------R-1.9-----------
+# ################R-1.9################
 # print(list(range(50, 81, 10)))
 
-# --------R-1.10-----------
+# ################R-1.10################
 # print(list(range(8, -9, -2)))
 
-# --------R-1.11-----------
+# ################R-1.11################
 # print([2 ** x for x in range(9)])
 
-# --------R-1.12-----------
+# ################R-1.12################
 # import random
 #
 #
@@ -78,7 +78,7 @@
 #
 # print(rand_choice([1, 4, 6, 8]))
 
-# --------C-1.13-----------
+# ################C-1.13################
 # def order_reverse(data):
 #     reverse = []
 #
@@ -90,7 +90,7 @@
 #
 # print(order_reverse([-2131, 2, 3, 4, 5]))
 
-# --------C-1.14-----------
+# ################C-1.14################
 # def odd_product_pair(data):
 #     """
 #     2*2 = 4 even
@@ -106,7 +106,7 @@
 # for item in odd_product_pair([1, 2, 3, 4, 5]):
 #     print(item)
 
-# --------C-1.15-----------
+# ################C-1.15################
 # def diff_nums(data):
 #     """
 #     2*2 = 4 even
@@ -126,15 +126,15 @@
 #
 # print(diff_nums([11, 2, 4, 3]))
 
-# --------C-1.18-----------
+# ################C-1.18################
 # 0, 6 - 2 = 4, 12 - 6 = 6, 20 - 12 = 8, 30 - 20 = 10, 42 - 30 = 12
 # a-b = b
 # [0, 2, 6, 12, 20, 30, 42]
 
-# --------C-1.19-----------
+# ################C-1.19################
 # print([chr(97 + char) for char in range(26)])
 
-# --------C-1.20-----------
+# ################C-1.20################
 # import random
 #
 #
@@ -159,7 +159,7 @@
 #
 # print(rand_int(["apple", "banana", "cherry", "melon"]))
 
-# --------C-1.22-----------
+# ################C-1.22################
 # def dot_product(a, b):
 #     if len(a) != len(b):
 #         return False
@@ -172,7 +172,7 @@
 #
 # print(dot_product([1, 2, 3, 4, 5, 6], [7, 8, 9, 10, 11, 12]))
 
-# --------C-1.24-----------
+# ################C-1.24################
 # def vowel_count(data):
 #     vowels = {"a", "e", "i", "o", "u"}
 #
@@ -186,7 +186,7 @@
 #
 # print(vowel_count('Hello World'))
 
-# --------C-1.25-----------
+# ################C-1.25################
 # def remove_symbols(data):
 #     sym = {'.', ',', '!', '?', ':', ';', "'"}
 #
@@ -197,7 +197,7 @@
 #
 # print(remove_symbols("Let's try, Mike."))
 
-# --------C-1.26-----------
+# ################C-1.26################
 # Copied from another repo cause do not want to waste my time for this task
 # def arithmetic_check(a, b, c):
 #     if a + b == c:
@@ -214,7 +214,7 @@
 #
 # print(arithmetic_check(1, 2, 3))
 
-# --------C-1.28-----------
+# ################C-1.28################
 # Copied from repo. do not want to waste time on this task
 # def p_norm(v, p=2):
 #     assert p != 0, 'You cannot use zero as a p-value'
@@ -226,7 +226,7 @@
 #
 # print(p_norm([4, 3]))
 
-# --------P-1.29-----------
+# ################P-1.29################
 # def permutations(head, tail=''):
 #     if len(head) == 0:
 #         print(tail)
@@ -243,7 +243,7 @@
 #
 # print(permutations("catdog"))
 
-# --------P-1.30-----------
+# ################P-1.30################
 # def divide_by_two(n):
 #     count = 0
 #
@@ -256,7 +256,7 @@
 #
 # print(divide_by_two(99))
 
-# --------P-1.31-----------
+# ################P-1.31################
 # def return_change(given, back):
 #     money = [100, 20, 10, 5, 2, 1, 0.25, 0.10, 0.05, 0.01]
 #
@@ -295,7 +295,7 @@
 #
 # print(return_change(1000.84, 575))
 
-# --------P-1.34-----------
+# ################P-1.34################
 # copied from another repo
 # import random
 #
@@ -329,7 +329,7 @@
 #
 # spamalot('I will never spam my friends again')
 
-# --------P-1.35-----------
+# ################P-1.35################
 # import random
 #
 #
@@ -349,5 +349,5 @@
 #
 # print(birthday(23))
 
-# --------P-1.36-----------
+# ################P-1.36################
 # Not interesting task
