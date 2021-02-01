@@ -179,6 +179,8 @@
 #
 #
 # class PredatoryCreditCard(CreditCard):
+#     OVERLIMIT_FEE = 5
+#
 #     def __init__(self, customer, bank, account_id, credit_limit, annual_percent):
 #         """
 #         super().__init__ inherit params from parent class
@@ -190,7 +192,7 @@
 #         success = super().charge(price)
 #
 #         if not success:
-#             self._balance += 5
+#             self._balance += PredatoryCreditCard.OVERLIMIT_FEE
 #
 #         return success
 #
