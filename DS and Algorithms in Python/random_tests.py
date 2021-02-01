@@ -142,3 +142,121 @@
 #
 # test = Range(start=2, stop=10, step=2)
 # print(test[2])
+
+# Inheritance example
+# class CreditCard:
+#     def __init__(self, customer, bank, account_id, credit_limit):
+#         self._customer = customer
+#         self._bank = bank
+#         self._account = account_id
+#         self._limit = credit_limit
+#         self._balance = 0
+#
+#     def get_customer(self):
+#         return self._customer
+#
+#     def get_bank(self):
+#         return self._bank
+#
+#     def get_account(self):
+#         return self._account
+#
+#     def get_limit(self):
+#         return self._limit
+#
+#     def get_balance(self):
+#         return self._balance
+#
+#     def charge(self, price):
+#         if price + self._balance > self._limit:
+#             return False
+#         else:
+#             self._balance += price
+#             return True
+#
+#     def make_payment(self, amount):
+#         self._balance -= amount
+#
+#
+# class PredatoryCreditCard(CreditCard):
+#     def __init__(self, customer, bank, account_id, credit_limit, annual_percent):
+#         """
+#         super().__init__ inherit params from parent class
+#         """
+#         super().__init__(customer, bank, account_id, credit_limit)
+#         self._year_per = annual_percent
+#
+#     def charge(self, price):
+#         success = super().charge(price)
+#
+#         if not success:
+#             self._balance += 5
+#
+#         return success
+#
+#     def process_month(self):
+#         if self._balance > 0:
+#             monthly_fee = pow(1 + self._year_per, 1 / 12)
+#             self._balance *= monthly_fee
+
+# more example on inheritance
+# class Progression:
+#     def __init__(self, start):
+#         self._current = start
+#
+#     def _advance(self):
+#         self._current += 1
+#
+#     def __next__(self):
+#         if self._current is None:
+#             raise StopIteration
+#         else:
+#             answer = self._current
+#             self._advance()
+#             return answer
+#
+#     def __iter__(self):
+#         return self
+#
+#     def print_progression(self, n):
+#         print(" ".join(str(next(self)) for _ in range(n)))
+#
+#
+# class ArithmeticProgression(Progression):
+#     def __init__(self, increment=1, start=0):
+#         super().__init__(start)
+#         self._increment = increment
+#
+#     def _advance(self):
+#         self._current += self._increment
+#
+#
+# class GeometricProgression(Progression):
+#     def __init__(self, base=1, start=1):
+#         super().__init__(start)
+#         self._base = base
+#
+#     def _advance(self):
+#         self._current *= self._base
+#
+#
+# class FibonacciProgression(Progression):
+#     def __init__(self, first=1, second=1):
+#         super().__init__(first)
+#         self._prev = second - first
+#
+#     def _advance(self):
+#         self._prev, self._current = self._current, self._prev + self._current
+#
+#
+# print("Default progression")
+# Progression(1).print_progression(10)
+#
+# print("Arithmetic progression")
+# ArithmeticProgression(5).print_progression(10)
+#
+# print("Arithmetic progression")
+# GeometricProgression(5).print_progression(10)
+#
+# print("Fibonacci progression with first number 41 and second number 123")
+# FibonacciProgression(41, 123).print_progression(10)
