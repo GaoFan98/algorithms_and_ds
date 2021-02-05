@@ -113,6 +113,23 @@
 #
 #     def __iter__(self):
 #         return self
+#
+#
+# class ReverseSequenceIterator:
+#     def __init__(self, sequence):
+#         self._seq = sequence
+#         self._number = len(sequence)
+#
+#     def __next__(self):
+#         self._number -= 1
+#
+#         if self._number >= 0:
+#             return self._seq[self._number]
+#         else:
+#             return StopIteration()
+#
+#     def __iter__(self):
+#         return self
 
 # Range
 # class Range:
@@ -224,6 +241,22 @@
 #         print(" ".join(str(next(self)) for _ in range(n)))
 #
 #
+# class AbsoluteDiffProgression(Progression):
+#     def __init__(self, first=2):
+#         self._current = first
+#         self._prev = 202
+#
+#     def __next__(self):
+#         answer = self._current
+#         self._current, self._prev = abs(self._current - self._prev), self._current
+#         return answer
+#
+#     def print_progression(self, n):
+#         print(" ".join(str(next(self)) for _ in range(n)))
+#
+#
+# print(AbsoluteDiffProgression().print_progression(9))
+
 # class ArithmeticProgression(Progression):
 #     def __init__(self, increment=1, start=0):
 #         super().__init__(start)
