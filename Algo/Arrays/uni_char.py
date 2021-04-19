@@ -1,15 +1,21 @@
-def uni_char(s):
-    dict = {}
+# def uni_char(s):
+#     dict = {}
+#
+#     for l in s:
+#         if l not in dict:
+#             dict[l] = 1
+#         else:
+#             dict[l] += 1
+#             return False
+#
+#     return bool(dict) if bool(dict) else False
+#
+#
+# out = uni_char('aabcs')
+# print(out)
 
-    for l in s:
-        if l not in dict:
-            dict[l] = 1
-        else:
-            dict[l] += 1
-            return False
+def short_v_uni_char(s):
+    return len(set(s)) == len(s)
 
-    return bool(dict) if bool(dict) else False
-
-
-out = uni_char('aabcs')
+out = short_v_uni_char('abcs')
 print(out)
