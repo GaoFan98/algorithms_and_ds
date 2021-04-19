@@ -227,21 +227,22 @@
 # print(p_norm([4, 3]))
 
 # ################P-1.29################
-# def permutations(head, tail=''):
-#     if len(head) == 0:
-#         print(tail)
-#     else:
-#         for i in range(len(head)):
-#             # print(head[:i])
-#             # print(head[i + 1:])
-#             # print(head[:i] + head[i + 1:])
-#             # print(head[i])
-#             # print(tail)
-#             # print(head[:i] + head[i + 1:], tail + head[i])
-#             permutations(head[i + 1:] + head[:i], head[i] + tail)
-#
-#
-# print(permutations("catdog"))
+def permutations(head, tail=''):
+    if len(head) == 0:
+        print(tail)
+    else:
+        for i in range(len(head)):
+            # print(head[:i])
+            # print(head[i + 1:])
+            # print(head[i + 1:] + head[:i])
+            # print(head[i])
+            # print(tail)
+            # print(head[i + 1:] + head[:i], head[i] + tail)
+            permutations(head[i + 1:] + head[:i], head[i] + tail)
+
+
+permutations("123")
+# print(permutations("cat"))
 
 # ################P-1.30################
 # def divide_by_two(n):
