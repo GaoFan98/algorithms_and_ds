@@ -1,4 +1,6 @@
 def get_change(given_coin):
+    global index
+
     coins = [1, 5, 10]
 
     if given_coin == 0:
