@@ -12,7 +12,7 @@ def permute(s):
     return out
 
 
-out = permute('abc')
+out = permute('4630')
 print(out)
 
 
