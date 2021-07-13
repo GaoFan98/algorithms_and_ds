@@ -142,4 +142,4 @@ fabric.properties
 !.elasticbeanstalk/*.global.yml
 .idea
 .idea
-.history
+.history/
