@@ -2,5 +2,10 @@
 using namespace std;
 
 int main(){
-    cout<<"First test function in C/C++";
+    int x = 3;
+    int y = 5;
+
+
+    
+    cout<<"C,C++ test: "<<x+y;
 }
