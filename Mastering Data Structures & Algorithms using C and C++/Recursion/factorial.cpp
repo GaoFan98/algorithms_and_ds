@@ -2,22 +2,22 @@
 using namespace std;
 
 // first method recursion T=O(n), S=O(n)
-// int facorial_recursion(int n){
+// int factorial_recursion(int n){
 //     if (n<=1)
 //     {
 //         return 1;
 //     }
     
-//     return facorial_recursion(n-1)*n;
+//     return factorial_recursion(n-1)*n;
 // }
 
 // int main(){
 //     int n = 5;
-//     cout<<facorial_recursion(n);
+//     cout<<factorial_recursion(n);
 // }
 
 // second method loop O(n)
-int facorial_recursion(int n){
+int factorial_loop(int n){
     int f=1;
     int i;
 
@@ -31,5 +31,5 @@ int facorial_recursion(int n){
 
 int main(){
     int n = 5;
-    cout<<facorial_recursion(n);
+    cout<<factorial_loop(n);
 }

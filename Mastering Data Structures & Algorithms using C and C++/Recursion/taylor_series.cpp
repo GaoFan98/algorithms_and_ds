@@ -52,5 +52,8 @@ double horner_ts(int x, int power){
 }
 
 int main(){
-    cout<<horner_ts(1,10);
+    int x;
+    int power;
+
+    cout<<horner_ts(x=1,power=10);
 }
