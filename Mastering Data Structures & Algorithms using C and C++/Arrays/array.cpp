@@ -3,7 +3,7 @@ using namespace std;
 
 struct Array
 {
-    int *A;
+    int A[10];
     int size;
     int length;
 };
@@ -11,36 +11,62 @@ struct Array
 void Display(struct Array arr)
 {
     int i;
-    printf("Elements \n");
+    printf("Array elements: \n");
 
     for (i = 0; i < arr.length; i++)
-    {
-        printf("%d",arr.A[i]);
-    }
+        printf("%d\n",arr.A[i]);
+    
 };
+
+void Append(struct Array *arr, int x)
+{
+    if (arr->length<arr->size)
+        arr->A[arr->length]=x;
+        arr->length++;
+
+        // or even simplier way
+        // arr->A[arr->length++]=x;
+}
+
+void Insert(struct Array *arr, int index, int x)
+{
+    int i;
+
+    if (index>=0 && arr->length>=index)
+        for (i=arr->length; i>index; i--)
+            arr->A[i]=arr->A[i-1];   
+        
+
+        arr->A[index]=x;
+        arr->length++;
+}
+
+int Delete(struct Array *arr, int index)
+{
+    int i,x;
+
+    if (index>=0 && index<arr->length)
+        x = arr->A[index];
+
+        for (i=index; i<arr->length-1; i++)
+            arr->A[i]=arr->A[i+1];   
+        
+        arr->length--;
+        
+        return x;
+
+    return 0;
+}
 
 int main()
 {
-    struct  Array arr;
-    int n,i;
+    struct Array arr={{2,3,4,5,6},10,5};
 
-    printf("Size of an array");
-    scanf("%d",&arr.size);
-
-    // allocate the memory for an array taken from input
-    arr.A=(int *)malloc(arr.size*sizeof(int));
-    // initial setup length of array to zero
-    arr.length=0;
-
-    printf("Enter number of integers in array");
-    scanf("%d",&n);
-    // allocating all the integers to array from input 
-    for (i=0; i<n; i++){
-        scanf("%d",&arr.A[i]);
-    }
-
-    // assigning the length from the input
-    arr.length=n;
-
+    // Append(&arr,10);
+    // Insert(&arr,3,2);
+    Delete(&arr,0);
     Display(arr);
+
+    return 0;
 }
+
